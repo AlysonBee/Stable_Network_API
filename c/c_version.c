@@ -97,7 +97,7 @@ void     sending_number_size(int sockfd, size_t size)
 }
 
 
-t_goldilox   *SuperRecv(int sockfd)
+t_goldilox   *StableRecv(int sockfd)
 {
     int size;
     t_goldilox  *goldiblock;
@@ -119,7 +119,7 @@ t_goldilox   *SuperRecv(int sockfd)
     return (goldiblock);
 }
 
-void    SuperSend(int sockfd, unsigned char *buffer, size_t size)
+void    StableSend(int sockfd, unsigned char *buffer, size_t size)
 {
     sending_number_size(sockfd, size);
     buffered_send(sockfd, buffer, size);
