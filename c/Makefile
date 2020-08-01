@@ -6,7 +6,7 @@ test_file_send_dir = side1/
 
 test_file_recv_dir = side2/
 
-src = file_send_recv.c init_client.c c_version.c
+src = file_send_recv.c init_client.c c_version.c init_server.c
 
 test_file_send_src = helloFileSender.c
 

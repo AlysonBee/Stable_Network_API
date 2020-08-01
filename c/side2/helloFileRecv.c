@@ -12,7 +12,7 @@ int     main(void)
 
     while (42)
     {
-        SuperRecv(sockfd);
+        StableRecv(sockfd);
 
     }
     return (0);

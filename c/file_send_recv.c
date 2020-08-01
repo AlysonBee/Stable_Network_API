@@ -99,7 +99,7 @@ void    file_sender(int sockfd, char *filename)
         file_content, size);
     
 
-    SuperSend(sockfd, total_buffer,
+    StableSend(sockfd, total_buffer,
          size + strlen(filename) + MAGIC_NUMBER_SIZE);
 }
 
