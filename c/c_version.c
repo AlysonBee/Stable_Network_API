@@ -31,12 +31,9 @@ void    buffered_send(int sockfd, unsigned char *buffer, size_t size)
     size_t      counter;
     ssize_t     sent;
 
-    printf("inside buffered send\n");
-    write(1, buffer, size);
+//    write(1, buffer, size);
     if (size < 4096)
     {
-        printf("size is %zu\n", size);
-         
         sent = send(sockfd, buffer, size, 0);
         return ;
     }
@@ -107,7 +104,7 @@ t_goldilox   *StableRecv(int sockfd)
     goldiblock->size = receive_number_size(sockfd);
 
     goldiblock->content = buffered_recv(sockfd, goldiblock->size);
-    write(1, goldiblock->content, goldiblock->size);
+  //  write(1, goldiblock->content, goldiblock->size);
     if (assert_buffer_is_file(goldiblock->content, goldiblock->size)
           == true)
     {

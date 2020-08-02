@@ -25,5 +25,7 @@ void    file_sender(int sockfd, char *filename);
 int     InitServer(int port, int listen_queue_length,
         struct sockaddr_in *server_address);
 int     GoldiloxAPIClientConnection(char *host, int port);
+bool    assert_api_connection(int sockfd);
+int     HandshakeAccept(int sockfd, struct sockaddr_in server_addr);
 
 #endif

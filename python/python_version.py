@@ -56,6 +56,7 @@ class GoldiloxAPIClientConnection():
         :param: buffer: The buffered data to be sent.
         """
         size = len(buffer)
+        print('buffer to be sent is ', buffer)
         self.sending_number_size(size)
         self.buffered_send(buffer, size)
 
@@ -127,6 +128,7 @@ class GoldiloxAPIClientConnection():
         chunk = bytearray()
         chunk_counter = 0
 
+
         if len(buffer) < 4096:
             self.sockfd.send(buffer.encode('utf-8'))
             return 
@@ -154,6 +156,7 @@ class GoldiloxAPIClientConnection():
                 counter += 4096
             else:
                 break
+
         return content
 
 
