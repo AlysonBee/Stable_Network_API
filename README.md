@@ -20,9 +20,9 @@ send(), recv(), socket(...) , connect/bind
 ```
 To
 ```
-GoldiloxAPIClientConnection (for socket/connect),
-SuperRecv (for send),
-SuperSend (for recv),
+init_client/init_server (for socket/connect),
+StableRecv (for send),
+StableSend (for recv),
 ```
 # TODO
 Functionality for starting up a server still needs be added.
